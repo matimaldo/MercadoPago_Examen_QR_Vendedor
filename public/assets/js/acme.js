@@ -132,7 +132,7 @@ $(document).ready(function() {
 									if(orderStatus=="closed"){
 										if(cashSound){playSound("cash")};
 										cashSound=false;
-										setTimeout(clearInterval(checkStatus),3000);
+										// setTimeout(clearInterval(checkStatus),3000);
 
 										$('#orderFinalStatus').text(elements[totalElements-1]);
 										$('#exampleModal').modal("hide");
@@ -140,8 +140,6 @@ $(document).ready(function() {
 
 										
 									} // Fin if
-								}else{
-									// $.post("api/order/create/",{"external_id":external_id,"json":JSON.stringify(orderJSON)})
 								}
 							});
 
