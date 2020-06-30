@@ -146,36 +146,36 @@ $(document).ready(function() {
 							
 							// Comprueba el estado del pago de la orden en servicio de recepción de notificaciones
 
-							// $.get("api/notifications/get/",{},function(data){
-							// 	console.log("Search Notifications:");
-							// 	console.log(data);
+							$.get("api/notifications/get/",{},function(data){
+								console.log("Search Notifications:");
+								console.log(data);
 
-							// 	if(data.status=="opened" && data.external_reference==external_reference){
+								if(data.status=="opened" && data.external_reference==external_reference){
 						 			
-							//  		$('#orderStatus').text(data.status);
-							//  		$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
-							// 	}
+							 		$('#orderStatus').text(data.status);
+							 		$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
+								}
 
-							// 	try{
-							// 		if(orderStatus=="opened" && elements[totalElements-1].payments[0].status=="rejected"){
-							// 			// print 
-							// 			if($('#paymentStatusRejected').text()==""){
-							// 				$('#paymentStatusRejected').text(JSON.stringify(data));
-							// 			}
-							// 		}
-							// 	}catch(e){}
+								try{
+									if(orderStatus=="opened" && elements[totalElements-1].payments[0].status=="rejected"){
+										// print 
+										if($('#paymentStatusRejected').text()==""){
+											$('#paymentStatusRejected').text(JSON.stringify(data));
+										}
+									}
+								}catch(e){}
 
-							// 	// Si la orden se cerró (pagó) se termina la búsqueda y cierra modal.
+								// Si la orden se cerró (pagó) se termina la búsqueda y cierra modal.
 								
-							// 	if(data.status=="closed" && data.external_reference==external_reference){
-							// 		if(cashSound){playSound("cash")};
-							// 		cashSound=false;
-							// 		setTimeout(clearInterval(checkStatus),3000);
-							// 		$('#exampleModal').modal("hide");
-							// 		$('#paymentStatusNotification').text(JSON.stringify(data));
+								if(data.status=="closed" && data.external_reference==external_reference){
+									if(cashSound){playSound("cash")};
+									cashSound=false;
+									setTimeout(clearInterval(checkStatus),3000);
+									$('#exampleModal').modal("hide");
+									$('#paymentStatusNotification').text(JSON.stringify(data));
 
-							// 	}
-							// });
+								}
+							});
 
 
 							

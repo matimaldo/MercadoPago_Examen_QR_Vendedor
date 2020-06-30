@@ -41,7 +41,8 @@ router.get('/status', async(req, res)=>{
   router.post('/notifications', async(req, res)=>{
   
     const body = req.body;
-    console.log("Maldo-Data-notifications")
+    console.log(body)
+    console.log(body.json)
     console.log(req.query);
     res.status(200).json('OK')
 })

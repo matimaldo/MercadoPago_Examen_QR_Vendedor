@@ -9,6 +9,7 @@ router.post('/create', async(req, res)=>{
 
   const external_id = req.query.external_id
   const body = req.body.json;
+  console.log(body);
 
   fetch('https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN, {
         method: 'post',
