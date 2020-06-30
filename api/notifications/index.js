@@ -38,5 +38,13 @@ router.get('/status', async(req, res)=>{
       .then(json => res.status(200).json(json));
   })
 
+  router.post('/notifications', async(req, res)=>{
+  
+    const body = req.body;
+    console.log("Maldo-Data-notifications")
+    console.log(req.query);
+    res.status(200).json('OK')
+})
+
   // exportar de router
   module.exports = router;
