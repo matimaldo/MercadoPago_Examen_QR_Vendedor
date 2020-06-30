@@ -1,0 +1,36 @@
+{
+  "name": "mercadopago_examen_qr_vendedor",
+  "version": "1.0.0",
+  "description": "--------------------------------",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node app.js --exec",
+    "dev": "nodemon app.js",
+    "devbabel": "nodemon app.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matimaldo/MercadoPago_Examen_QR_Vendedor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matimaldo/MercadoPago_Examen_QR_Vendedor/issues"
+  },
+  "homepage": "https://github.com/matimaldo/MercadoPago_Examen_QR_Vendedor#readme",
+  "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3"
+  }
+}
