@@ -13,8 +13,9 @@ router.get('/get', async(req, res)=>{
        fetch(global.buscar+'?access_token='+process.env.ACCESS_TOKEN)
          .then(r => r.json())
          .then(json => res.status(200).json(json));
+     }else{
+       res.status(200).json('OK')
      }
-    res.status(200).json('OK')
   })
 
   router.post('/notifications', async(req, res)=>{
