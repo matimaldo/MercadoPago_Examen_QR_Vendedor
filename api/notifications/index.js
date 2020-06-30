@@ -24,7 +24,7 @@ router.get('/get', async(req, res)=>{
     console.log('Notificacion'); 
     console.log(req.body);;
     const body = req.body;
-    if(body.topic == 'payment'){
+    if(body.topic == 'merchant_order'){
       global.buscar = body.resource
     }
     res.status(200).json('OK')
