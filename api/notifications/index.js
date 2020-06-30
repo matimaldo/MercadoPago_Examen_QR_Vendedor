@@ -9,6 +9,7 @@ global.buscar = ''
  
 router.get('/get', async(req, res)=>{
 
+  console.log('get - '+global.buscar);
      if(global.buscar !=''){
        fetch(global.buscar+'?access_token='+process.env.ACCESS_TOKEN)
          .then(r => r.json())
