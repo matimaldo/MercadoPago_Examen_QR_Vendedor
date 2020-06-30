@@ -9,9 +9,6 @@ router.post('/create', async(req, res)=>{
 
   const body = req.body.json;
 
-  console.log(body)
-  console.log('https://api.mercadopago.com/pos?access_token='+process.env.ACCESS_TOKEN)
-
   fetch('https://api.mercadopago.com/pos?access_token='+process.env.ACCESS_TOKEN, {
         method: 'post',
         body:    body,
@@ -23,13 +20,14 @@ router.post('/create', async(req, res)=>{
 
 router.get('/get', async(req, res)=>{
 
-    const body = req.query.external_id;
-  
-    console.log(body)
-  
-    fetch('https://api.mercadopago.com/pos?access_token='+process.env.ACCESS_TOKEN+'&external_id='+body)
+    const external_id = req.query.external_id;
+   
+    fetch('https://api.mercadopago.com/pos?access_token='+process.env.ACCESS_TOKEN+'&external_id='+external_id)
       .then(r => r.json())
-      .then(json => res.status(200).json(json));
+      .then(json => {
+        console.log(json);
+        res.status(200).json(json)
+      });
   })
 
   // exportar de router

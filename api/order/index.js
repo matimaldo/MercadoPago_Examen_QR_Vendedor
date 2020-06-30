@@ -7,8 +7,10 @@ dotenv.config();
  
 router.post('/create', async(req, res)=>{
 
-  const external_id = req.query.external_id
+  const external_id = req.body.external_id
   const body = req.body.json;
+
+  console.log('post - https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN);
   console.log(body);
 
   fetch('https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN, {
@@ -30,10 +32,11 @@ router.get('/status', async(req, res)=>{
       .then(json => res.status(200).json(json));
   })
 
-router.delete('/delete', async(req, res)=>{
+router.get('/delete', async(req, res)=>{
 
     const external_id = req.query.external_id;
-    console.log('https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN)
+    console.log('delete - https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN);
+    
     fetch('https://api.mercadopago.com/mpmobile/instore/qr/'+process.env.COLLECTOR_ID+'/'+external_id+'?access_token='+process.env.ACCESS_TOKEN)
       .then(r => r.json())
       .then(json => res.status(200).json(json));
