@@ -1,7 +1,8 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import path from 'path';
+var express = require("express");
+var morgan = require("morgan");
+var cors = require("cors");
+var path = require("path");
+
 
 const app = express();
 
