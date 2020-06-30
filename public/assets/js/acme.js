@@ -130,12 +130,12 @@ $(document).ready(function() {
 									// Si la orden se cerró (pagó) termina el timeout y pinta el JSON resultante y cierra el modal
 
 									if(orderStatus=="closed"){
-										if(cashSound){playSound("cash")};
-										cashSound=false;
+										// if(cashSound){playSound("cash")};
+										// cashSound=false;
 										// setTimeout(clearInterval(checkStatus),3000);
 
-										$('#orderFinalStatus').text(elements[totalElements-1]);
-										$('#exampleModal').modal("hide");
+										// $('#orderFinalStatus').text(elements[totalElements-1]);
+										// $('#exampleModal').modal("hide");
 										$('#paymentStatusSearch').text(JSON.stringify(data));
 
 										
