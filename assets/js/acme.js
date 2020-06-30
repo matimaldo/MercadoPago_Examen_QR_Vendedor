@@ -325,7 +325,19 @@ $(document).ready(function() {
 		// REVISA AQUÍ:
 		// Modifica el storeJSON con la estructura necesaria para crear una Store correctamente.
 
-		var storeJSON = {}
+		var storeJSON = {
+			name : storeName,
+			location : {
+				street_number: streetNumber,
+				street_name: streetName,
+				city_name: city,
+				state_name: state,
+				latitude: latitude,
+				longitude: longitude,
+				reference: addressReference
+			},
+			external_id: externalStoreID
+		}
 
 		console.log(storeJSON);
 		$.post("api/store/create/",{json:JSON.stringify(storeJSON)},function(results){
