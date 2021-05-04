@@ -20,12 +20,15 @@
   },
   "homepage": "https://github.com/matimaldo/MercadoPago_Examen_QR_Vendedor#readme",
   "dependencies": {
+    "cheerio": "*",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",

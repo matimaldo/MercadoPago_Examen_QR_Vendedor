@@ -22,6 +22,7 @@ app.use('/api/store/', require('./api/store/index'));
 app.use('/api/pos/', require('./api/pos/index'));
 app.use('/api/order/', require('./api/order/index'));
 app.use('/api/notifications/', require('./api/notifications/index'));
+app.use('/api/coti/', require('./api/coti/index'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
