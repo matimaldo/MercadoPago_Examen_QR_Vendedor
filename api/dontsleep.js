@@ -20,7 +20,7 @@ rule.dayOfWeek = [new schedule.Range(0, 6)];
 const job = schedule.scheduleJob(rule, function(){
   console.log('Ejecucion! ' + new Date);
 
-  fetch('https://bienlimpitoymas-mp-nodejs.herokuapp.com/api/uno', {
+  fetch('https://matimaldo-mercadopago-qr.herokuapp.com/uno/dos.jpg', {
     method: 'get'        
   })
 })
