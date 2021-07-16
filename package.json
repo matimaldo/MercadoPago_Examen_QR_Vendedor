@@ -25,11 +25,14 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jimp": "^0.16.1",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "node-schedule": "^2.0.0",
+    "puppeteer": "^9.1.1",
     "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "tesseract.js": "^2.1.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
